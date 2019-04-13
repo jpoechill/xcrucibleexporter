@@ -40,9 +40,9 @@
       <div class="row mt-3">
         <div class="col-md-12">
           Raw JSON <br>
-          <textarea class="w-100" rows="10" v-model="crucibleData"></textarea>
+          <textarea class="w-100" ref="crucibleData" rows="10" v-model="crucibleData"></textarea>
           <!-- <button @click="convertToCSV()">Convert to CSV</button> -->
-          <button class="btn btn-light mt-2">Copy to Clipboard</button>
+          <button class="btn btn-light mt-2" @click="copyToClipboard()">Copy to Clipboard</button>
         </div>
       </div>
     </div>
@@ -161,6 +161,12 @@ export default {
           this.crucibleData =  JSON.stringify(games)
         })
       })
+    },
+    copyToClipboard: function () {
+      let copyText = this.$refs.crucibleData
+      
+      copyText.select();
+      document.execCommand("copy");
     },
     getPGCR: function () {
       let activityID = '3816936971'
