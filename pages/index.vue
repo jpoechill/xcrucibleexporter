@@ -78,7 +78,7 @@ export default {
   methods: {
     searchForUser: function () {
       let query = 'gsxrclyde'
-      let url = 'http://www.bungie.net/platform/User/SearchUsers/?q=' + query
+      let url = 'https://www.bungie.net/platform/User/SearchUsers/?q=' + query
 
       this.$axios(url, this.APIconfig).then(response => {
         console.log(response)
@@ -87,7 +87,7 @@ export default {
     getIDByUsername: function () {
       let query = this.handle.replace('#','%23')
       console.log(query)
-      let url = 'http://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/-1/' + query
+      let url = 'https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/-1/' + query
 
       this.$axios(url, this.APIconfig).then(response => {
         this.memID = response.data.Response[0].membershipId
@@ -102,7 +102,7 @@ export default {
     },
     getCharsByID: function () {
       let query = this.handle
-      let url = 'http://www.bungie.net/platform/Destiny2/' + this.membershipType + '/Profile/' + this.memID + '/?components=200'
+      let url = 'https://www.bungie.net/platform/Destiny2/' + this.membershipType + '/Profile/' + this.memID + '/?components=200'
 
       this.$axios(url, this.APIconfig).then(response => {
         let chars = response.data.Response.characters.data
