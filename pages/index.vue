@@ -89,6 +89,7 @@ export default {
       console.log(query)
       let url = 'https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/-1/' + query
 
+      console.log(url)
       this.$axios(url, this.APIconfig).then(response => {
         this.memID = response.data.Response[0].membershipId
 
