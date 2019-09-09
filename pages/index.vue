@@ -33,8 +33,11 @@
               {{ char.light }} 
             </option>
           </select>
-          <button :disabled="currChar === 'Character'" class="btn btn-light w-100 mt-2" @click="getHistoricalForChar()">Get PVP Historical Data</button> 
-          <button :disabled="currChar === 'Character'" class="btn btn-light w-100 mt-2" @click="getActivityHistory()">Get PVP Game History</button> 
+          <button :disabled="currChar === 'Character'" class="btn btn-light w-100 mt-2" @click="getHistoricalForChar()">Get PvP Historical Data</button> 
+          <button :disabled="currChar === 'Character'" class="btn btn-light w-100 mt-2" @click="getActivityHistory()">Get PvP Game History</button> 
+        </div>
+        <div class="offset-md-3 col-md-3 text-right">
+          <img src="/crucible-logo.jpg" class="w-25" alt="">
         </div>
       </div>
       <div class="row mt-3">
