@@ -3,7 +3,7 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-md-12">
-          <strong><h5>xCrucibleDataExporter v0.0.1</h5></strong>
+          <strong><h5>xCrucibleDataExporter v0.1</h5></strong>
         </div>
       </div>
       <div class="row">
