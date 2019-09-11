@@ -16,7 +16,7 @@ module.exports = {
       { 'http-equiv': "Content-Security-Policy", content: "upgrade-insecure-requests" }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/crucible-logo.jpg' },
       { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' }
     ]
   },

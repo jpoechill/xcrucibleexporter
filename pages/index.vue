@@ -162,8 +162,18 @@ export default {
           }) 
 
           this.crucibleData =  JSON.stringify(games)
+          // this.crucibleData = JSON.stringify(this.filterCrucibleMatches(games))
         })
       })
+    },
+    filterCrucibleMatches: function (allMatchesJSON) {
+      return allMatchesJSON.filter((x) => { 
+        if (x.activityDetails.modes[1] === 69) {
+          return true
+        } else {
+          return false
+        }
+      }).map((x) => x.values.standing.basic.value )
     },
     copyToClipboard: function () {
       let copyText = this.$refs.crucibleData
